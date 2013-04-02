@@ -1,0 +1,21 @@
+<head>
+  <title>pub-field-test</title>
+</head>
+
+<body>
+  {{> allWidgets}}
+</body>
+
+<template name="allWidgets">
+  <h1>all the widgets!</h1>
+  {{#each theWidgets}}
+  	{{> oneWidget}}
+  {{/each}}
+</template>
+
+<template name='oneWidget'>
+	<p style='background-color: blue; color: white; padding: 5px; margin: 5px;'>
+		General: {{profile.general}} <br>
+		Specific: {{profile.specific}}
+	</p>
+</template>
